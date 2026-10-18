@@ -1,0 +1,56 @@
+SARNEY NO LUGAR DO RYU — VERSÃO 01
+
+COMO JOGAR NO WINDOWS
+1. Extraia TODO o ZIP para uma pasta.
+2. Abra JOGAR.bat com dois cliques.
+3. Mantenha a janela do servidor aberta. O navegador abre localhost:8765.
+4. Clique Play. Na seleção, o primeiro personagem agora é SARNEY.
+Se o navegador não abrir automaticamente, acesse http://localhost:8765/
+Não abra index.html diretamente: WebAssembly precisa do servidor local.
+Se aparecer o aviso de proteção do Windows, examine os arquivos antes de executar.
+O servidor usa apenas localhost; não precisa publicar nem usar conta.
+
+CONTROLES
+Setas: mover / abaixar
+Z: pular / confirmar
+X: soco
+C: chute
+A: Hadouken
+Cima + A: Shoryuken
+Baixo + A: chute giratório
+S: super (Shinku Sarney)
+D: defender
+Enter: iniciar / pausar
+
+ALTERAÇÕES
+Ryu substituído por Sarney: retrato da seleção, HUD, tela de continue e
+100 entradas de quadros nas animações de luta. Camisa clara, bermuda e tênis
+inspirados na foto enviada. Nome exibido SARNEY. Golpes mantêm as regras do Ryu.
+Os outros 11 personagens e o motor original foram preservados.
+O salvamento desta cópia usa chave própria no navegador.
+Arte criada a partir da foto com imagegen; rosto é uma aproximação estilizada.
+Há menos desenhos distintos do que na animação original, reutilizados ao longo
+dos quadros. Vozes e efeitos sonoros originais do Ryu continuam presentes.
+A interface geral continua em inglês. Esta é uma versão inicial para teste.
+
+VALIDAÇÃO
+Motor WASM carregado e testes de seleção, movimento, ataques aéreos e agachados,
+especiais, super, áudio, salvamento, menu de 12 lutadores e chefe aprovados.
+Imagens reais do motor: mod/selecao.png e mod/no-jogo.png.
+Servidor PowerShell preparado para Windows; não executado em Windows aqui.
+
+ARQUIVOS PARA DESENVOLVIMENTO
+mod/sarney-sprites.png: arte gerada usada nos sprites.
+mod/aplicar_sprites.py: empacotador (Pillow; só necessário para desenvolvimento).
+O empacotador espera os game.data/game.mjs ORIGINAIS da versão publicada
+em 12/10/2026. Não execute novamente sobre os arquivos já modificados.
+mod/codigo/: versões de fight.c e ending_text.h para o código-fonte enviado.
+sarney.mjs: adaptação de nome para o WASM incluído; valida a estrutura antes de alterar.
+Ao recompilar o projeto com o fonte modificado, essa adaptação deixa de ser necessária.
+
+ORIGEM E CRÉDITOS
+https://github.com/mikolalysenko/smw-street-fighter
+Runtime publicado: https://mikolalysenko.github.io/smw-street-fighter/
+Fan crossover; mantenha LICENSE.txt e ASSETS.md. Os créditos e direitos do
+conteúdo original permanecem com seus titulares. Nenhum commit, push ou deploy
+foi realizado.

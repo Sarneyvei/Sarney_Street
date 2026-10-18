@@ -1,0 +1,28 @@
+SUPER SARNEYWORLD II — EVAGOS — ATUALIZAÇÃO 02
+
+COMO ABRIR
+Abra JOGAR.bat, como antes. Se o jogo já estiver aberto no navegador,
+pressione Ctrl+F5 para carregar esta atualização.
+
+ALTERAÇÃO
+Evagos na abertura e Super SarneyWorld II na tela de título.
+Os dois ícones de Mario do mapa receberam seu retrato: o contador de vidas
+no alto e o personagem que anda pelo mapa. O retrato foi ampliado para
+aproveitar o espaço disponível. A imagem em alta resolução continua nítida
+quando a janela ou a tela cheia aumentam.
+O novo retrato também aparece na seleção e no painel de jogo do Sarney.
+O lutador ganhou novas poses com seu rosto e quepe. Os quadros foram
+alinhados para reduzir a tremedeira e manter a posição dos pés mais estável.
+
+ARQUIVOS
+mod/sarney-retrato-hd.png: retrato em alta resolução com fundo transparente,
+preparado com a ferramenta integrada de imagens a partir da foto enviada.
+mod/sarney-foto-original.png: foto original enviada, preservada.
+mod/previa-mapa-foto.png: prévia real do jogo com os dois retratos.
+mod/prompt-retrato.txt: instrução usada na preparação do retrato.
+mod/sarney-sprites-v02.png: nova arte do lutador com quepe.
+
+PARA DESFAZER
+Os arquivos anteriores ficam em mod/backup-antes-foto-v02.
+Copie app.mjs, style.css, index.html, game.mjs e game.data dessa pasta para a pasta
+principal do jogo e atualize o navegador com Ctrl+F5.

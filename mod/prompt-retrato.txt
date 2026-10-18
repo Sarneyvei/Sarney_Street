@@ -1,0 +1,6 @@
+Ferramenta: image_gen integrada (sem CLI).
+Arquivo de entrada: foto original enviada pelo usuário (sarney-foto-original.png).
+Transparência: true.
+
+Prompt:
+Use case: identity-preserve / background-extraction. Asset type: high-resolution transparent photographic avatar for a browser game. Supporting input: the attached portrait image of the man wearing the white naval captain's peaked cap (309x256 image). Primary request: extract only this exact man's head, cap, neck and upper shoulders, centered, tight framing, with an actually transparent background. Preserve his exact face, age, facial expression, skin tone, stubble, facial proportions, cap shape and golden cap decoration, and white uniform. Remove the airplane background, the white circular frame, the small globe/interface icon at bottom right and all other graphic interface elements. Increase clarity carefully while retaining the person's exact identity; realistic photograph, natural texture, no drawing, no pixel art, no new accessories or text. Keep the entire cap visible and avoid extra empty space. 1024x1024 transparent PNG output.

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#101217">
+<title>Super SarneyWorld II — Evagos</title>
+<meta name="description" content="Hadoukens in Dinosaur Land. Play twelve Street Fighter fighters through Super Sarney World, with three-bar supers, an Akuma finale and character endings. Play free in your browser or download for Mac, Linux and Windows.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Super SarneyWorld II — The World Warrior">
+<meta property="og:description" content="Pick a fighter. Break the rules. Twelve world warriors, Sarney’s original levels and a very different final boss.">
+<meta property="og:image" content="media/previa-mapa.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sarney fires a giant Shinku Hadouken across Dinosaur Land.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Super SarneyWorld II — The World Warrior">
+<meta name="twitter:description" content="Hadoukens in Dinosaur Land. Play in your browser or download for desktop.">
+<meta name="twitter:image" content="media/previa-mapa.png">
+<link rel="icon" type="image/png" sizes="32x32" href="media/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css?v=sarney-foto-02">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"Super SarneyWorld II — Evagos","description":"Versão personalizada com Sarney no mapa, na seleção e no jogo.","genre":["Platformer","Fighting"],"playMode":"SinglePlayer","gamePlatform":["Web browser","Windows"],"image":"media/previa-mapa.png"}
+</script>
+</head>
+<body>
+<main>
+  <header><h1>Super SarneyWorld II</h1><p>The World Warrior</p></header>
+  <section id="cabinet" aria-label="Super SarneyWorld II — The World Warrior">
+    <div class="playfield">
+      <canvas id="screen" width="256" height="224" tabindex="0" aria-label="Game screen. Press Enter to start. Arrow keys move, Z jumps, X punches, A performs a special, S performs a super."></canvas>
+      <button id="play" class="play" disabled>Loading…</button>
+    </div>
+    <div id="touch-controls" hidden aria-label="Touch game controls">
+      <div class="touch-menu"><button data-key="Escape" aria-label="Back">BACK</button><button data-key="Enter" aria-label="Start or pause">START</button><button id="touch-expand" aria-label="Expand or restore game">EXPAND</button></div>
+      <div class="touch-dpad" data-dpad aria-label="Movement pad; slide for diagonals">
+        <button data-key="ArrowUp" aria-label="Up">▲</button><button data-key="ArrowLeft" aria-label="Left">◀</button><span></span><button data-key="ArrowRight" aria-label="Right">▶</button><button data-key="ArrowDown" aria-label="Down">▼</button>
+      </div>
+      <div class="touch-actions"><button data-key="KeyD">GUARD</button><button data-key="KeyA">SPECIAL</button><button data-key="KeyS">SUPER</button><button data-key="KeyX">PUNCH</button><button data-key="KeyC">KICK</button><button data-key="KeyZ" class="touch-jump">JUMP</button></div>
+    </div>
+    <nav class="player-toolbar" aria-label="Game controls">
+      <div class="player-actions"><button id="pause">Pause</button><button id="mute">Sound on</button><button id="fullscreen">Fullscreen</button></div>
+      <a class="repo-link" href="https://github.com/mikolalysenko/smw-street-fighter" target="_blank" rel="noopener noreferrer" aria-label="Star the repository on GitHub (opens a new tab)"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg>Star on GitHub</a>
+    </nav>
+    <p id="status" role="status">Loading game…</p>
+  </section>
+  <div class="player-options">
+    <details id="help">
+      <summary>Controls &amp; help</summary>
+      <div class="controls">
+        <p class="phone-help"><strong>Touch</strong><span>Hold the direction pad and attack buttons together. Slide for diagonals. Start opens menus; Jump confirms. Turn your phone sideways for a larger play area.</span></p>
+        <p><strong>Keyboard</strong><span><kbd>← ↑ ↓ →</kbd> Move · <kbd>Z</kbd> Jump<br><kbd>X</kbd> Punch · <kbd>C</kbd> Kick<br><kbd>A</kbd> Special · <kbd>S</kbd> Super<br><kbd>D</kbd> Guard · <kbd>Enter</kbd> Start</span></p>
+        <p><strong>Controller</strong><span>D-pad / stick · Move<br>A · Jump · X · Punch · B · Kick<br>Y · Special · RB · Super<br>LB · Guard · Start · Pause</span></p>
+        <p><strong>Good to know</strong><span>Hold Down to crouch. Up / Down + Special changes your move. Hold Down, then Jump for a high jump.</span><span>Hold Guard + Punch to pick up and carry. Release either to let go; add Down to drop or Up to throw upward.</span><span>Mushroom +1 super bar · Flower +2 · Feather +3.</span></p>
+      </div>
+      <p data-debug hidden>Debug: Pause → Player Select / Akuma Battle.</p>
+      <div class="save-tools"><span id="save-status">Progress and high score stay in this browser.</span><button id="export" disabled>Export save</button></div>
+    </details>
+    <nav class="quick-links" aria-label="Game resources"><a href="https://github.com/mikolalysenko/smw-street-fighter/blob/main/docs/PLAYING.md" target="_blank" rel="noopener noreferrer">Player guide</a><a href="https://github.com/mikolalysenko/smw-street-fighter/releases/latest" target="_blank" rel="noopener noreferrer">Download</a></nav>
+  </div>
+  <details class="showcase" id="teaser">
+    <summary>Imagens desta versão</summary>
+    <div class="gallery">
+      <figure><a href="media/previa-titulo.png"><img src="media/previa-titulo.png" loading="lazy" alt="Super SarneyWorld II — Evagos"><figcaption>Super SarneyWorld II — Evagos</figcaption></a></figure>
+      <figure><a href="media/previa-mapa.png"><img src="media/previa-mapa.png" loading="lazy" alt="Retratos ampliados do Sarney no mapa"><figcaption>Sua foto nos dois ícones do mapa</figcaption></a></figure>
+      <figure><a href="media/previa-selecao.png"><img src="media/previa-selecao.png" loading="lazy" alt="Novo retrato na seleção de personagens"><figcaption>Novo retrato na seleção</figcaption></a></figure>
+      <figure><a href="media/previa-personagem.png"><img src="media/previa-personagem.png" loading="lazy" alt="Sarney com quepe durante o jogo"><figcaption>Novo lutador com quepe</figcaption></a></figure>
+    </div>
+  </details>
+  <footer>Unofficial fan game. Original characters and assets by Evagos and Capcom. <a href="ASSETS.md">Credits</a> · <a href="https://github.com/mikolalysenko/smw-street-fighter/issues" target="_blank" rel="noopener noreferrer">Report an issue</a></footer>
+</main>
+<script type="module" src="app.mjs?v=sarney-foto-02"></script>
+</body>
+</html>

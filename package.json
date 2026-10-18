@@ -1,0 +1,8 @@
+{
+  "name": "super-sarneyworld-ii-evagos",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Super SarneyWorld II — Evagos, distribuição estática personalizada",
+  "scripts": { "repack": "node mod/aplicar_foto_v02.mjs" },
+  "devDependencies": { "sharp": "0.35.5", "pngjs": "7.0.0" }
+}
