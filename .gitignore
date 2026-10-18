@@ -1,0 +1,7 @@
+mod/backup-antes-foto*/
+node_modules/
+test*.html
+*.zip
+*.log
+Thumbs.db
+.DS_Store
